@@ -15,7 +15,7 @@ import javafx.stage.Stage;
 import javafx.scene.control.Menu;
 import javafx.scene.control.MenuBar;
 
-public class calculator extends Application {
+public class Calculator extends Application {
 	@Override // Override the start method in the Application class
 	public void start(Stage primaryStage) {
 		// Create a pane and set its properties
