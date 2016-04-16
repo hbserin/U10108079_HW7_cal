@@ -36,7 +36,6 @@ public class Calculator extends Application {
 		pane.add(display,0,1,6,1);
 		display.setText("0");
 
-
 		//create the buttons
 		Button btMC = new Button("MC");
 		btMC.setPrefSize(50, 50);
@@ -155,7 +154,7 @@ public class Calculator extends Application {
 		pane.setHgap(5.5);
 		pane.setVgap(5.5);
 
-		//Add number function
+		//Add number's features
 		bt0.setOnAction((ActionEvent event) -> {
 			if((display.getText()).equals("0")){
 				display.setText("0");
@@ -233,6 +232,13 @@ public class Calculator extends Application {
 				display.setText("9");
 			}else{
 				display.setText(display.getText()+"9");
+			}
+		});
+
+		//Add point's features
+		btPoint.setOnAction((ActionEvent event) -> {
+			if((display.getText()).indexOf('.')==-1){
+				display.setText(display.getText()+".");
 			}
 		});
 
