@@ -14,6 +14,7 @@ import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import javafx.scene.control.Menu;
 import javafx.scene.control.MenuBar;
+import javafx.event.ActionEvent;
 
 public class Calculator extends Application {
 	@Override // Override the start method in the Application class
@@ -30,9 +31,10 @@ public class Calculator extends Application {
 		pane.add(bar,0,0,6,1);
 
 		//create the display bar
-		TextField display = new TextField("0");
+		TextField display = new TextField();
 		display.setEditable(false);
 		pane.add(display,0,1,6,1);
+		display.setText("0");
 
 
 		//create the buttons
@@ -153,6 +155,86 @@ public class Calculator extends Application {
 		pane.setHgap(5.5);
 		pane.setVgap(5.5);
 
+		//Add number function
+		bt0.setOnAction((ActionEvent event) -> {
+			if((display.getText()).equals("0")){
+				display.setText("0");
+			}else{
+				display.setText(display.getText()+"0");
+			}
+		});
+
+		bt1.setOnAction((ActionEvent event) -> {
+			if((display.getText()).equals("0")){
+				display.setText("1");
+			}else{
+				display.setText(display.getText()+"1");
+			}
+		});
+
+		bt2.setOnAction((ActionEvent event) -> {
+			if((display.getText()).equals("0")){
+				display.setText("2");
+			}else{
+				display.setText(display.getText()+"2");
+			}
+		});
+
+		bt3.setOnAction((ActionEvent event) -> {
+			if((display.getText()).equals("0")){
+				display.setText("3");
+			}else{
+				display.setText(display.getText()+"3");
+			}
+		});
+
+		bt4.setOnAction((ActionEvent event) -> {
+			if((display.getText()).equals("0")){
+				display.setText("4");
+			}else{
+				display.setText(display.getText()+"4");
+			}
+		});
+
+		bt5.setOnAction((ActionEvent event) -> {
+			if((display.getText()).equals("0")){
+				display.setText("5");
+			}else{
+				display.setText(display.getText()+"5");
+			}
+		});
+
+		bt6.setOnAction((ActionEvent event) -> {
+			if((display.getText()).equals("0")){
+				display.setText("6");
+			}else{
+				display.setText(display.getText()+"6");
+			}
+		});
+
+		bt7.setOnAction((ActionEvent event) -> {
+			if((display.getText()).equals("0")){
+				display.setText("7");
+			}else{
+				display.setText(display.getText()+"7");
+			}
+		});
+
+		bt8.setOnAction((ActionEvent event) -> {
+			if((display.getText()).equals("0")){
+				display.setText("8");
+			}else{
+				display.setText(display.getText()+"8");
+			}
+		});
+
+		bt9.setOnAction((ActionEvent event) -> {
+			if((display.getText()).equals("0")){
+				display.setText("9");
+			}else{
+				display.setText(display.getText()+"9");
+			}
+		});
 
 		// Create a scene and place it in the stage
 		Scene scene = new Scene(pane);
