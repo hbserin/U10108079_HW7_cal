@@ -28,126 +28,135 @@ public class Calculator extends Application {
 		Menu menu2 = new Menu("編輯(E)");
 		Menu menu3 = new Menu("說明(H)");
 		bar.getMenus().addAll(menu1,menu2,menu3);
-		pane.add(bar,0,0,6,1);
+		pane.add(bar,0,0,5,1);
+		bar.setMaxWidth(300); 
+
+		//create the display bar of all equation
+		TextField displayAll = new TextField();
+		displayAll.setEditable(false);
+		pane.add(displayAll,0,1,5,1);
+		displayAll.setText("");
+		displayAll.setMaxWidth(300); 
 
 		//create the display bar
 		TextField display = new TextField();
 		display.setEditable(false);
-		pane.add(display,0,1,6,1);
+		pane.add(display,0,2,5,1);
 		display.setText("0");
-
+		display.setMaxWidth(300); 
+		
 		//create the buttons
 		Button btMC = new Button("MC");
 		btMC.setPrefSize(50, 50);
-		pane.add(btMC, 0, 2);
+		pane.add(btMC, 0, 3);
 
 		Button btMR = new Button("MR");
 		btMR.setPrefSize(50, 50);
-		pane.add(btMR, 1, 2);
+		pane.add(btMR, 1, 3);
 
 		Button btMS = new Button("MS");
 		btMS.setPrefSize(50, 50);
-		pane.add(btMS, 2, 2);
+		pane.add(btMS, 2, 3);
 
 		Button btMplus = new Button("M+");
 		btMplus.setPrefSize(50, 50);
-		pane.add(btMplus, 3, 2);
+		pane.add(btMplus, 3, 3);
 
 		Button btMminus = new Button("M-");
 		btMminus.setPrefSize(50, 50);
-		pane.add(btMminus, 4, 2);
+		pane.add(btMminus, 4, 3);
 
 		Button btBackspace = new Button("←");
 		btBackspace.setPrefSize(50, 50);
-		pane.add(btBackspace, 0, 3);
+		pane.add(btBackspace, 0, 4);
 
 		Button btCE = new Button("CE");
 		btCE.setPrefSize(50, 50);
-		pane.add(btCE, 1, 3);
+		pane.add(btCE, 1, 4);
 
 		Button btC = new Button("C");
 		btC.setPrefSize(50, 50);
-		pane.add(btC, 2, 3);
+		pane.add(btC, 2, 4);
 
 		Button btMplusNMminus = new Button("±");
 		btMplusNMminus.setPrefSize(50, 50);
-		pane.add(btMplusNMminus, 3, 3);
+		pane.add(btMplusNMminus, 3, 4);
 
 		Button btSqrt = new Button("√");
 		btSqrt.setPrefSize(50, 50);
-		pane.add(btSqrt, 4, 3);
+		pane.add(btSqrt, 4, 4);
 
 		Button bt1 = new Button("1");
 		bt1.setPrefSize(50, 50);
-		pane.add(bt1, 0, 7);
+		pane.add(bt1, 0, 8);
 
 		Button bt2 = new Button("2");
 		bt2.setPrefSize(50, 50);
-		pane.add(bt2, 1, 7);
+		pane.add(bt2, 1, 8);
 
 		Button bt3 = new Button("3");
 		bt3.setPrefSize(50, 50);
-		pane.add(bt3, 2, 7);
+		pane.add(bt3, 2, 8);
 
 		Button bt4 = new Button("4");
 		bt4.setPrefSize(50, 50);
-		pane.add(bt4, 0, 6);
+		pane.add(bt4, 0, 7);
 
 		Button bt5 = new Button("5");
 		bt5.setPrefSize(50, 50);
-		pane.add(bt5, 1, 6);
+		pane.add(bt5, 1, 7);
 
 		Button bt6 = new Button("6");
 		bt6.setPrefSize(50, 50);
-		pane.add(bt6, 2, 6);
+		pane.add(bt6, 2, 7);
 
 		Button bt7 = new Button("7");
 		bt7.setPrefSize(50, 50);
-		pane.add(bt7, 0, 5);
+		pane.add(bt7, 0, 6);
 
 		Button bt8 = new Button("8");
 		bt8.setPrefSize(50, 50);
-		pane.add(bt8, 1, 5);
+		pane.add(bt8, 1, 6);
 
 		Button bt9 = new Button("9");
 		bt9.setPrefSize(50, 50);
-		pane.add(bt9, 2, 5);
+		pane.add(bt9, 2, 6);
 
 		Button btDividedBy = new Button("/");
 		btDividedBy.setPrefSize(50, 50);
-		pane.add(btDividedBy, 3, 5);
+		pane.add(btDividedBy, 3, 6);
 
 		Button btPercent = new Button("%");
 		btPercent.setPrefSize(50, 50);
-		pane.add(btPercent, 4, 5);
+		pane.add(btPercent, 4, 6);
 
 		Button btTines = new Button("*");
 		btTines.setPrefSize(50, 50);
-		pane.add(btTines, 3, 6);
+		pane.add(btTines, 3, 7);
 
 		Button btDenominator = new Button("1/x");
 		btDenominator.setPrefSize(50, 50);
-		pane.add(btDenominator, 4, 6);
+		pane.add(btDenominator, 4, 7);
 
 		Button btMinus = new Button("-");
 		btMinus.setPrefSize(50, 50);
-		pane.add(btMinus, 3, 7);
+		pane.add(btMinus, 3, 8);
 
 		Button btEquals = new Button("=");
 		btEquals.setPrefSize(50, 100);
-		pane.add(btEquals, 4, 7, 1, 2);
+		pane.add(btEquals, 4, 8, 1, 2);
 
 		Button bt0 = new Button("0");
 		bt0.setPrefSize(100, 50);
-		pane.add(bt0, 0, 8, 2, 1);
+		pane.add(bt0, 0, 9, 2, 1);
 
 		Button btPoint = new Button(".");
 		btPoint.setPrefSize(50, 50);
-		pane.add(btPoint, 2, 8);
+		pane.add(btPoint, 2, 9);
 
 		Button btPlus = new Button("+");
 		btPlus.setPrefSize(50, 50);
-		pane.add(btPlus, 3, 8);
+		pane.add(btPlus, 3, 9);
 
 		pane.setAlignment(Pos.CENTER);
 		pane.setPadding(new Insets(11.5, 12.5, 13.5, 14.5));
@@ -161,6 +170,8 @@ public class Calculator extends Application {
 			}else{
 				display.setText(display.getText()+"0");
 			}
+
+			displayAll.setText(displayAll.getText()+"0");
 		});
 
 		bt1.setOnAction((ActionEvent event) -> {
@@ -169,6 +180,8 @@ public class Calculator extends Application {
 			}else{
 				display.setText(display.getText()+"1");
 			}
+
+			displayAll.setText(displayAll.getText()+"1");
 		});
 
 		bt2.setOnAction((ActionEvent event) -> {
@@ -177,6 +190,8 @@ public class Calculator extends Application {
 			}else{
 				display.setText(display.getText()+"2");
 			}
+
+			displayAll.setText(displayAll.getText()+"2");
 		});
 
 		bt3.setOnAction((ActionEvent event) -> {
@@ -185,6 +200,8 @@ public class Calculator extends Application {
 			}else{
 				display.setText(display.getText()+"3");
 			}
+
+			displayAll.setText(displayAll.getText()+"3");
 		});
 
 		bt4.setOnAction((ActionEvent event) -> {
@@ -193,6 +210,8 @@ public class Calculator extends Application {
 			}else{
 				display.setText(display.getText()+"4");
 			}
+
+			displayAll.setText(displayAll.getText()+"4");
 		});
 
 		bt5.setOnAction((ActionEvent event) -> {
@@ -201,6 +220,8 @@ public class Calculator extends Application {
 			}else{
 				display.setText(display.getText()+"5");
 			}
+
+			displayAll.setText(displayAll.getText()+"5");
 		});
 
 		bt6.setOnAction((ActionEvent event) -> {
@@ -209,6 +230,8 @@ public class Calculator extends Application {
 			}else{
 				display.setText(display.getText()+"6");
 			}
+
+			displayAll.setText(displayAll.getText()+"6");
 		});
 
 		bt7.setOnAction((ActionEvent event) -> {
@@ -217,6 +240,8 @@ public class Calculator extends Application {
 			}else{
 				display.setText(display.getText()+"7");
 			}
+
+			displayAll.setText(displayAll.getText()+"7");
 		});
 
 		bt8.setOnAction((ActionEvent event) -> {
@@ -225,6 +250,8 @@ public class Calculator extends Application {
 			}else{
 				display.setText(display.getText()+"8");
 			}
+
+			displayAll.setText(displayAll.getText()+"8");
 		});
 
 		bt9.setOnAction((ActionEvent event) -> {
@@ -233,6 +260,8 @@ public class Calculator extends Application {
 			}else{
 				display.setText(display.getText()+"9");
 			}
+
+			displayAll.setText(displayAll.getText()+"9");
 		});
 
 		//Add point's features
@@ -240,11 +269,14 @@ public class Calculator extends Application {
 			if((display.getText()).indexOf('.')==-1){
 				display.setText(display.getText()+".");
 			}
+
+				displayAll.setText(displayAll.getText()+".");
 		});
-		
+
 		//Add C's features
 		btC.setOnAction((ActionEvent event) -> {
 			display.setText("0");
+			displayAll.setText("0");
 		});
 
 		// Create a scene and place it in the stage
