@@ -241,6 +241,11 @@ public class Calculator extends Application {
 				display.setText(display.getText()+".");
 			}
 		});
+		
+		//Add C's features
+		btC.setOnAction((ActionEvent event) -> {
+			display.setText("0");
+		});
 
 		// Create a scene and place it in the stage
 		Scene scene = new Scene(pane);
