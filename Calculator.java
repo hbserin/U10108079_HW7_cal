@@ -267,6 +267,15 @@ public class Calculator extends Application {
 			}
 		});
 
+		//Add "±" 's features
+		btMplusNMminus.setOnAction((ActionEvent event) -> {
+			if(!(display.getText()).startsWith("-")){
+				display.setText("-" + display.getText());
+			}else{
+				display.setText((display.getText()).substring(1,(display.getText()).length()));
+			}
+		});
+
 		// Create a scene and place it in the stage
 		Scene scene = new Scene(pane);
 		primaryStage.setTitle("小算盤"); // Set the stage title
