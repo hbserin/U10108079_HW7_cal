@@ -376,6 +376,24 @@ public class Calculator extends Application {
 			display.setText("0");
 		});
 
+		//Add equals's features
+		btEquals.setOnAction((ActionEvent event) -> {
+
+			double result;
+			displayAll.setText(displayAll.getText() + display.getText());
+
+
+			if((displayAll.getText()).endsWith("+") || (displayAll.getText()).endsWith("-") || (displayAll.getText()).endsWith("*") || (displayAll.getText()).endsWith("/")){
+				displayAll.setText(displayAll.getText().substring(0,(display.getText()).length()-1));
+				result = Double.parseDouble(displayAll.getText());
+			}else{
+				result = Double.parseDouble(displayAll.getText());
+			}
+
+			display.setText(Double.toString(result));
+			displayAll.setText(" ");
+		});
+
 		// Create a scene and place it in the stage
 		Scene scene = new Scene(pane);
 		primaryStage.setTitle("小算盤"); // Set the stage title
