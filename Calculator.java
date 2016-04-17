@@ -278,28 +278,47 @@ public class Calculator extends Application {
 
 		//Add plus's features
 		btPlus.setOnAction((ActionEvent event) -> {
-			displayAll.setText(displayAll.getText() + display.getText() + "+");
+			if((display.getText()).startsWith("-")){
+				displayAll.setText( displayAll.getText() + "(" + display.getText() + ")+");
+			}else{
+				displayAll.setText(displayAll.getText() + display.getText() + "+");
+			}
 
 			display.setText("0");
 		});
 
 		//Add minus's features
 		btMinus.setOnAction((ActionEvent event) -> {
-			displayAll.setText(displayAll.getText() + display.getText() + "-");
+			if((display.getText()).startsWith("-")){
+				displayAll.setText( displayAll.getText() + "(" + display.getText() + ")-");
+			}else{
+				displayAll.setText(displayAll.getText() + display.getText() + "-");
+
+			}
 
 			display.setText("0");
 		});
 
 		//Add tines's features
 		btTines.setOnAction((ActionEvent event) -> {
-			displayAll.setText(displayAll.getText() + display.getText() + "*");
+			if((display.getText()).startsWith("-")){
+				displayAll.setText( displayAll.getText() + "(" + display.getText() + ")*");
+			}else{
+				displayAll.setText(displayAll.getText() + display.getText() + "*");
+
+			}
 
 			display.setText("0");
 		});
 
 		//Add divided by's features
 		btDividedBy.setOnAction((ActionEvent event) -> {
-			displayAll.setText(displayAll.getText() + display.getText() + "/");
+			if((display.getText()).startsWith("-")){
+				displayAll.setText( displayAll.getText() + "(" + display.getText() + ")/");
+			}else{
+				displayAll.setText(displayAll.getText() + display.getText() + "/");
+
+			}
 
 			display.setText("0");
 		});
