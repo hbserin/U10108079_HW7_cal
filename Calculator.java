@@ -278,6 +278,20 @@ public class Calculator extends Application {
 
 		//Add plus's features
 		btPlus.setOnAction((ActionEvent event) -> {
+
+			//Delete the "0"s in the end of decimal
+			for(int i = ((display.getText()).length()) ;i > 0 ;i--){
+				if((display.getText()).indexOf('.')!=-1&&(display.getText()).endsWith("0")){
+					display.setText( display.getText().substring(0,(display.getText()).length()-1));
+				}
+			}
+
+			//If the end of number in display is ".", delete the "."
+			if((display.getText()).endsWith(".")){
+				display.setText( display.getText().substring(0,(display.getText()).length()-1));
+			}
+			
+			// In the equation, negative number add parenthesis
 			if((display.getText()).startsWith("-")){
 				displayAll.setText( displayAll.getText() + "(" + display.getText() + ")+");
 			}else{
@@ -289,6 +303,19 @@ public class Calculator extends Application {
 
 		//Add minus's features
 		btMinus.setOnAction((ActionEvent event) -> {
+
+			//Delete the "0"s in the end of decimal
+			for(int i = ((display.getText()).length()) ;i > 0 ;i--){
+				if((display.getText()).indexOf('.')!=-1&&(display.getText()).endsWith("0")){
+					display.setText( display.getText().substring(0,(display.getText()).length()-1));
+				}
+			}
+
+			//If the end of number in display is ".", delete the "."
+			if((display.getText()).endsWith(".")){
+				display.setText( display.getText().substring(0,(display.getText()).length()-1));
+			}
+			
 			if((display.getText()).startsWith("-")){
 				displayAll.setText( displayAll.getText() + "(" + display.getText() + ")-");
 			}else{
@@ -301,6 +328,19 @@ public class Calculator extends Application {
 
 		//Add tines's features
 		btTines.setOnAction((ActionEvent event) -> {
+
+			//Delete the "0"s in the end of decimal
+			for(int i = ((display.getText()).length()) ;i > 0 ;i--){
+				if((display.getText()).indexOf('.')!=-1&&(display.getText()).endsWith("0")){
+					display.setText( display.getText().substring(0,(display.getText()).length()-1));
+				}
+			}
+
+			//If the end of number in display is ".", delete the "."
+			if((display.getText()).endsWith(".")){
+				display.setText( display.getText().substring(0,(display.getText()).length()-1));
+			}
+			
 			if((display.getText()).startsWith("-")){
 				displayAll.setText( displayAll.getText() + "(" + display.getText() + ")*");
 			}else{
@@ -313,6 +353,19 @@ public class Calculator extends Application {
 
 		//Add divided by's features
 		btDividedBy.setOnAction((ActionEvent event) -> {
+
+			//Delete the "0"s in the end of decimal
+			for(int i = ((display.getText()).length()) ;i > 0 ;i--){
+				if((display.getText()).indexOf('.')!=-1&&(display.getText()).endsWith("0")){
+					display.setText( display.getText().substring(0,(display.getText()).length()-1));
+				}
+			}
+
+			//If the end of number in display is ".", delete the "."
+			if((display.getText()).endsWith(".")){
+				display.setText( display.getText().substring(0,(display.getText()).length()-1));
+			}
+			
 			if((display.getText()).startsWith("-")){
 				displayAll.setText( displayAll.getText() + "(" + display.getText() + ")/");
 			}else{
