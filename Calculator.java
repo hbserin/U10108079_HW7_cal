@@ -170,8 +170,6 @@ public class Calculator extends Application {
 			}else{
 				display.setText(display.getText()+"0");
 			}
-
-			displayAll.setText(displayAll.getText()+"0");
 		});
 
 		bt1.setOnAction((ActionEvent event) -> {
@@ -180,8 +178,6 @@ public class Calculator extends Application {
 			}else{
 				display.setText(display.getText()+"1");
 			}
-
-			displayAll.setText(displayAll.getText()+"1");
 		});
 
 		bt2.setOnAction((ActionEvent event) -> {
@@ -190,8 +186,6 @@ public class Calculator extends Application {
 			}else{
 				display.setText(display.getText()+"2");
 			}
-
-			displayAll.setText(displayAll.getText()+"2");
 		});
 
 		bt3.setOnAction((ActionEvent event) -> {
@@ -200,8 +194,6 @@ public class Calculator extends Application {
 			}else{
 				display.setText(display.getText()+"3");
 			}
-
-			displayAll.setText(displayAll.getText()+"3");
 		});
 
 		bt4.setOnAction((ActionEvent event) -> {
@@ -210,8 +202,6 @@ public class Calculator extends Application {
 			}else{
 				display.setText(display.getText()+"4");
 			}
-
-			displayAll.setText(displayAll.getText()+"4");
 		});
 
 		bt5.setOnAction((ActionEvent event) -> {
@@ -220,8 +210,6 @@ public class Calculator extends Application {
 			}else{
 				display.setText(display.getText()+"5");
 			}
-
-			displayAll.setText(displayAll.getText()+"5");
 		});
 
 		bt6.setOnAction((ActionEvent event) -> {
@@ -230,8 +218,6 @@ public class Calculator extends Application {
 			}else{
 				display.setText(display.getText()+"6");
 			}
-
-			displayAll.setText(displayAll.getText()+"6");
 		});
 
 		bt7.setOnAction((ActionEvent event) -> {
@@ -240,8 +226,6 @@ public class Calculator extends Application {
 			}else{
 				display.setText(display.getText()+"7");
 			}
-
-			displayAll.setText(displayAll.getText()+"7");
 		});
 
 		bt8.setOnAction((ActionEvent event) -> {
@@ -250,8 +234,6 @@ public class Calculator extends Application {
 			}else{
 				display.setText(display.getText()+"8");
 			}
-
-			displayAll.setText(displayAll.getText()+"8");
 		});
 
 		bt9.setOnAction((ActionEvent event) -> {
@@ -260,8 +242,6 @@ public class Calculator extends Application {
 			}else{
 				display.setText(display.getText()+"9");
 			}
-
-			displayAll.setText(displayAll.getText()+"9");
 		});
 
 		//Add point's features
@@ -269,14 +249,22 @@ public class Calculator extends Application {
 			if((display.getText()).indexOf('.')==-1){
 				display.setText(display.getText()+".");
 			}
-
-				displayAll.setText(displayAll.getText()+".");
 		});
 
 		//Add C's features
 		btC.setOnAction((ActionEvent event) -> {
 			display.setText("0");
 			displayAll.setText("0");
+		});
+
+		//Add Backspace's features
+		btBackspace.setOnAction((ActionEvent event) -> {
+			if((display.getText()).length()!=0 && (display.getText()).equals("0")==false){
+				display.setText(display.getText().substring(0,(display.getText()).length()-1));
+			}
+			if((display.getText()).length()==0){
+				display.setText("0");
+			}
 		});
 
 		// Create a scene and place it in the stage
